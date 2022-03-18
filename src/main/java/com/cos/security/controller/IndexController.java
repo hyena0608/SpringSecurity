@@ -3,6 +3,7 @@ package com.cos.security.controller;
 import com.cos.security.model.User;
 import com.cos.security.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -58,4 +59,9 @@ public class IndexController {
         return "redirect:/loginForm";
     }
 
+    @Secured("ROLE_ADMIN")
+    @GetMapping("/info")
+    public @ResponseBody String info() {
+        return "개인정보";
+    }
 }
