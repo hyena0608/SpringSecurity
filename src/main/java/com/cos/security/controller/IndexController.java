@@ -29,7 +29,7 @@ public class IndexController {
         PrincipalDetails principalDetails = (PrincipalDetails) authentication.getPrincipal();
         System.out.println("authentication = " + principalDetails.getUser());
 
-        System.out.println("userDetails = " + userDetails.getUsername());
+        System.out.println("userDetails = " + userDetails.getUser());
         return "세션 정보 확인하기";
     }
 
