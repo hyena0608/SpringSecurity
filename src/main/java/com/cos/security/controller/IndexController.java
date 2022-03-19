@@ -24,10 +24,12 @@ public class IndexController {
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @GetMapping("/test/login")
-    public @ResponseBody String testLogin(Authentication authentication) { // Authentication DI (의존성 주입)
+    public @ResponseBody String testLogin(Authentication authentication, @AuthenticationPrincipal PrincipalDetails userDetails) { // Authentication DI (의존성 주입)
         System.out.println("/test/login ==============");
         PrincipalDetails principalDetails = (PrincipalDetails) authentication.getPrincipal();
         System.out.println("authentication = " + principalDetails.getUser());
+
+        System.out.println("userDetails = " + userDetails.getUsername());
         return "세션 정보 확인하기";
     }
 
