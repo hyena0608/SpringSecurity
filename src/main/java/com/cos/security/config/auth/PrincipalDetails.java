@@ -1,6 +1,7 @@
 package com.cos.security.config.auth;
 
 import com.cos.security.model.User;
+import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -20,6 +21,7 @@ import java.util.Collection;
  * @Override
  */
 
+@Data
 public class PrincipalDetails implements UserDetails {
 
     private User user; // 콤포지션
