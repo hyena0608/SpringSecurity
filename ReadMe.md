@@ -3,7 +3,7 @@ Spring Security 사용해보기
 
 > Spring Security는 `Spring Security Session`을 들고 있다.
 > 
-> <img src="./images/Authentication.png" width="400" height="400" alt="Authentication 두 객체 사진"/>
+> <img src="./images/Authentication.png" alt="Authentication 두 객체 사진"/>
 > 
 > 그러면 원래 서버 세션 영역 안에 시큐리티가 관리하는 세션이 따로 존재하게 된다.
 > 
