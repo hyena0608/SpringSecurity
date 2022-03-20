@@ -20,6 +20,7 @@ public class PrincipalDetailsService implements UserDetailsService {
 
     /**
      * 시큐리티 session(내부 Authentication(내부 UserDetails))
+     * 함수 종료시 @AuthenticationPrincipal 어노테이션이 만들어진다.
      * @param username
      * @return
      * @throws UsernameNotFoundException
