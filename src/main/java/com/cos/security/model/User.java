@@ -1,5 +1,6 @@
 package com.cos.security.model;
 
+import lombok.Builder;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -26,4 +27,14 @@ public class User {
     @CreationTimestamp
     private Timestamp createDate;
 
+    @Builder
+    public User(String username, String password, String email, String role, String provider, String providerId, Timestamp createDate) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.role = role;
+        this.provider = provider;
+        this.providerId = providerId;
+        this.createDate = createDate;
+    }
 }
